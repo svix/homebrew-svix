@@ -5,24 +5,29 @@
 class Svix < Formula
   desc "Svix CLI utility"
   homepage "https://www.svix.com"
-  version "0.8.0"
+  version "0.8.1"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/svixhq/svix-cli/releases/download/v0.8.0/svix_0.8.0_Darwin_x86_64.tar.gz"
-    sha256 "d25eb3a077d21860820e1cbc2692cd7e28b37a8e5fb331a856483cba8a8bb173"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/svixhq/svix-cli/releases/download/v0.8.1/svix_0.8.1_Darwin_x86_64.tar.gz"
+      sha256 "096db823e6ff6002decd221052da630ce6c1d38833e73deef17abad06328689b"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/svixhq/svix-cli/releases/download/v0.8.1/svix_0.8.1_Darwin_arm64.tar.gz"
+      sha256 "84d4fa50edcb3ba5d3d1a1d0f6a4307f6d159720b524440351a4507d0c35670e"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/svixhq/svix-cli/releases/download/v0.8.0/svix_0.8.0_Darwin_arm64.tar.gz"
-    sha256 "0d1530cd63353e94e0ef197c3c2a566e32fdc0a8470a6833c69884f95abd8557"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/svixhq/svix-cli/releases/download/v0.8.0/svix_0.8.0_Linux_x86_64.tar.gz"
-    sha256 "ca09124183171659df2352f36f6ce917828d0607441e9d94084067cbf604e98b"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/svixhq/svix-cli/releases/download/v0.8.0/svix_0.8.0_Linux_arm64.tar.gz"
-    sha256 "8c6054abd957d08ee734093fbeacd997362c4e1f7a22fc61c4162aa61eb482da"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/svixhq/svix-cli/releases/download/v0.8.1/svix_0.8.1_Linux_x86_64.tar.gz"
+      sha256 "1d6745c997d7e9683795a6ccf3e4799cc600df246c3fb7fdaaae927d10ef0d40"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/svixhq/svix-cli/releases/download/v0.8.1/svix_0.8.1_Linux_arm64.tar.gz"
+      sha256 "d57a54ac02b2166f69db493a52718f1b48d30811f0953d98e6795718ebaf54d7"
+    end
   end
 
   def install
