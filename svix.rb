@@ -5,28 +5,28 @@
 class Svix < Formula
   desc "Svix CLI utility"
   homepage "https://www.svix.com"
-  version "0.11.0"
+  version "0.11.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-cli/releases/download/v0.11.0/svix_0.11.0_Darwin_x86_64.tar.gz"
-      sha256 "80dd921bca13348688a2d579850c780189fea3791d72534eebefed5780807672"
+      url "https://github.com/svix/svix-cli/releases/download/v0.11.1/svix_0.11.1_Darwin_x86_64.tar.gz"
+      sha256 "4b4f5788a13d693ead914549d6de53343c396da1047492a75182095d77d87bbe"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/svix/svix-cli/releases/download/v0.11.0/svix_0.11.0_Darwin_arm64.tar.gz"
-      sha256 "013298aff5150151ea4790ebbb8438dcacc6d97a7d87e8f49436e10b4c82cef5"
+      url "https://github.com/svix/svix-cli/releases/download/v0.11.1/svix_0.11.1_Darwin_arm64.tar.gz"
+      sha256 "f80271e1737a599c73e40012b2efdf6cb4fca92e5e9589b5619388f4e08800f7"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-cli/releases/download/v0.11.0/svix_0.11.0_Linux_x86_64.tar.gz"
-      sha256 "61382afd73a22cfdd7cf9b4535845cd3871ccbc9eb7e93c5c0dbe49baa2422a0"
+      url "https://github.com/svix/svix-cli/releases/download/v0.11.1/svix_0.11.1_Linux_x86_64.tar.gz"
+      sha256 "02e34b342fb1581fa3c10b3f87645811ecfb4ac332345838808e772c5da34222"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svix/svix-cli/releases/download/v0.11.0/svix_0.11.0_Linux_arm64.tar.gz"
-      sha256 "aa88c3cbdba459d40902b87b4a4e05fa2e0589d415cd512c9b532f18dbea5fd0"
+      url "https://github.com/svix/svix-cli/releases/download/v0.11.1/svix_0.11.1_Linux_arm64.tar.gz"
+      sha256 "a9a8a60dfe0f200e3a7f05f01ff3083d4a48ffea5580f35d66486415e77afb03"
     end
   end
 
