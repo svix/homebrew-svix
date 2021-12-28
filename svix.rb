@@ -5,33 +5,44 @@
 class Svix < Formula
   desc "Svix CLI utility"
   homepage "https://www.svix.com"
-  version "0.14.0"
-  bottle :unneeded
+  version "0.15.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-cli/releases/download/v0.14.0/svix_0.14.0_Darwin_x86_64.tar.gz"
-      sha256 "cb96a65fe58652762c339ad11f13f8aa3a0b979facf5f58ba2feeaa2ed6bb75c"
+      url "https://github.com/svix/svix-cli/releases/download/v0.15.0/svix_0.15.0_Darwin_x86_64.tar.gz"
+      sha256 "e5bda5ec3994b84f542da9239ba94dc12624d12c20b638987c764ebe8d6c6f81"
+
+      def install
+        bin.install "svix"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/svix/svix-cli/releases/download/v0.14.0/svix_0.14.0_Darwin_arm64.tar.gz"
-      sha256 "4c75700da34e8d6321105a0dffa462b92da73292368f1da461d4c8184c0f1299"
+      url "https://github.com/svix/svix-cli/releases/download/v0.15.0/svix_0.15.0_Darwin_arm64.tar.gz"
+      sha256 "f6f5e70052a146ec7531465a33bebc516350b9eb704d60ccec489b5f0db1b3d6"
+
+      def install
+        bin.install "svix"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-cli/releases/download/v0.14.0/svix_0.14.0_Linux_x86_64.tar.gz"
-      sha256 "a6400e23aba9a72385af838a7f0453060f70f797b1d7f539033254ba05fd7b7d"
+      url "https://github.com/svix/svix-cli/releases/download/v0.15.0/svix_0.15.0_Linux_x86_64.tar.gz"
+      sha256 "30cfd77ef6a6267a7926103691abf48b9c790a93550f18249c172dd1141d91cd"
+
+      def install
+        bin.install "svix"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svix/svix-cli/releases/download/v0.14.0/svix_0.14.0_Linux_arm64.tar.gz"
-      sha256 "05dbf9eab791950fac495d666c261edf369b39519523b0c06680af5b78df6c19"
-    end
-  end
+      url "https://github.com/svix/svix-cli/releases/download/v0.15.0/svix_0.15.0_Linux_arm64.tar.gz"
+      sha256 "a9ee84f0f9af342e613d051951f964bef377c011d567cbf7b8c044b4b5c56e57"
 
-  def install
-    bin.install "svix"
+      def install
+        bin.install "svix"
+      end
+    end
   end
 
   def caveats; <<~EOS
