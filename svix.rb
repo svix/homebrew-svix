@@ -5,20 +5,20 @@
 class Svix < Formula
   desc "Svix CLI utility"
   homepage "https://www.svix.com"
-  version "0.17.0"
+  version "0.18.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/svix/svix-cli/releases/download/v0.17.0/svix_0.17.0_Darwin_arm64.tar.gz"
-      sha256 "6672fcb9c682c168c1ebb59d21171f2c5097b22f8f00475e8da24a76245dfe60"
+    if Hardware::CPU.intel?
+      url "https://github.com/svix/svix-cli/releases/download/v0.18.1/svix_0.18.1_Darwin_x86_64.tar.gz"
+      sha256 "01424ea4409e29cc82f69469d9037e76159d0ff5ebc36646fa26d4fb1c9c3e4b"
 
       def install
         bin.install "svix"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-cli/releases/download/v0.17.0/svix_0.17.0_Darwin_x86_64.tar.gz"
-      sha256 "1cce947c0f9db1c399dce2b6b21e08b1aff6f870f1c904ff0268bdcfd33bdd08"
+    if Hardware::CPU.arm?
+      url "https://github.com/svix/svix-cli/releases/download/v0.18.1/svix_0.18.1_Darwin_arm64.tar.gz"
+      sha256 "fdef8366b14acdbf5f8277fc35887e8c9b872d020d821ed1c1677979417935f3"
 
       def install
         bin.install "svix"
@@ -28,16 +28,16 @@ class Svix < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svix/svix-cli/releases/download/v0.17.0/svix_0.17.0_Linux_arm64.tar.gz"
-      sha256 "aa78ce6023db104306060522c56e7a159cd688a515514f3bfa139f0f796cb02c"
+      url "https://github.com/svix/svix-cli/releases/download/v0.18.1/svix_0.18.1_Linux_arm64.tar.gz"
+      sha256 "7981aa8a63e19f7ea924e6f4a5798057f7c67e3c704871b60fe219695761dfa6"
 
       def install
         bin.install "svix"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-cli/releases/download/v0.17.0/svix_0.17.0_Linux_x86_64.tar.gz"
-      sha256 "0d84e01cf2c5b56b105442821d30fb42cdc8401205e37dca7f92d3bdbcf71f5f"
+      url "https://github.com/svix/svix-cli/releases/download/v0.18.1/svix_0.18.1_Linux_x86_64.tar.gz"
+      sha256 "2fa6844572a29d551e0a5ee9129591b7a349a6e94bdb4e4d78feac9d77d3fae7"
 
       def install
         bin.install "svix"
@@ -45,8 +45,9 @@ class Svix < Formula
     end
   end
 
-  def caveats; <<~EOS
-    Thanks for installing the Svix CLI! If this is your first time using the CLI, checkout our docs at https://docs.svix.com.
-  EOS
+  def caveats
+    <<~EOS
+      Thanks for installing the Svix CLI! If this is your first time using the CLI, checkout our docs at https://docs.svix.com.
+    EOS
   end
 end
