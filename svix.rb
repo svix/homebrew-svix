@@ -5,20 +5,20 @@
 class Svix < Formula
   desc "Svix CLI utility"
   homepage "https://www.svix.com"
-  version "0.18.1"
+  version "0.18.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-cli/releases/download/v0.18.1/svix_0.18.1_Darwin_x86_64.tar.gz"
-      sha256 "01424ea4409e29cc82f69469d9037e76159d0ff5ebc36646fa26d4fb1c9c3e4b"
+      url "https://github.com/svix/svix-cli/releases/download/v0.18.2/svix_0.18.2_Darwin_x86_64.tar.gz"
+      sha256 "56d289c6daf49199af98fab6e06237c60b1e0ce695d147a160ecb3cf02241fd1"
 
       def install
         bin.install "svix"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/svix/svix-cli/releases/download/v0.18.1/svix_0.18.1_Darwin_arm64.tar.gz"
-      sha256 "fdef8366b14acdbf5f8277fc35887e8c9b872d020d821ed1c1677979417935f3"
+      url "https://github.com/svix/svix-cli/releases/download/v0.18.2/svix_0.18.2_Darwin_arm64.tar.gz"
+      sha256 "b831f5916659a1892666bd39bc8a5188cd761754972c43297f5d228febbb9e92"
 
       def install
         bin.install "svix"
@@ -27,17 +27,17 @@ class Svix < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svix/svix-cli/releases/download/v0.18.1/svix_0.18.1_Linux_arm64.tar.gz"
-      sha256 "7981aa8a63e19f7ea924e6f4a5798057f7c67e3c704871b60fe219695761dfa6"
+    if Hardware::CPU.intel?
+      url "https://github.com/svix/svix-cli/releases/download/v0.18.2/svix_0.18.2_Linux_x86_64.tar.gz"
+      sha256 "651bd34d4580f26bd696c3adca70c24e88a5795e46c0373abf909e8c8c9c18a2"
 
       def install
         bin.install "svix"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-cli/releases/download/v0.18.1/svix_0.18.1_Linux_x86_64.tar.gz"
-      sha256 "2fa6844572a29d551e0a5ee9129591b7a349a6e94bdb4e4d78feac9d77d3fae7"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/svix/svix-cli/releases/download/v0.18.2/svix_0.18.2_Linux_arm64.tar.gz"
+      sha256 "9821bc1e36a86f39e03a613ef9f29ae0d255b59e243d46f582c8e49a4eba4503"
 
       def install
         bin.install "svix"
