@@ -5,20 +5,20 @@
 class Svix < Formula
   desc "Svix CLI utility"
   homepage "https://www.svix.com"
-  version "0.18.3"
+  version "0.19.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/svix/svix-cli/releases/download/v0.18.3/svix_0.18.3_Darwin_arm64.tar.gz"
-      sha256 "2f2ee9b539050596ad24deef627a0e23af4f05367401079a23707d467003eb40"
+      url "https://github.com/svix/svix-cli/releases/download/v0.19.0/svix_0.19.0_Darwin_arm64.tar.gz"
+      sha256 "64a9334b284dd41f288769b246bdf499da8700fb0abd77e6e5233d145ff383f4"
 
       def install
         bin.install "svix"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-cli/releases/download/v0.18.3/svix_0.18.3_Darwin_x86_64.tar.gz"
-      sha256 "c876a3a32048099c8e9153eaa95e4bb8f28a86f39901baff5a259f9298299605"
+      url "https://github.com/svix/svix-cli/releases/download/v0.19.0/svix_0.19.0_Darwin_x86_64.tar.gz"
+      sha256 "ae89b8368bc4343f6dca409ce2df65a054a8a1a21e33c8579e37460c56f8ab02"
 
       def install
         bin.install "svix"
@@ -28,16 +28,16 @@ class Svix < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-cli/releases/download/v0.18.3/svix_0.18.3_Linux_x86_64.tar.gz"
-      sha256 "10719775eba4326b8f26e4f0a4cf9f712840cc0ac97a9f45bcd2cb5ff526f321"
+      url "https://github.com/svix/svix-cli/releases/download/v0.19.0/svix_0.19.0_Linux_x86_64.tar.gz"
+      sha256 "ddf14e0b9d711c91a6e6dedd180f33e5125c8620e7182283d323769ae1cac3aa"
 
       def install
         bin.install "svix"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/svix/svix-cli/releases/download/v0.18.3/svix_0.18.3_Linux_arm64.tar.gz"
-      sha256 "1a800aaf6b672551a229cb7c724344e5069302fa97dfeb0b716c7120b4878bba"
+      url "https://github.com/svix/svix-cli/releases/download/v0.19.0/svix_0.19.0_Linux_arm64.tar.gz"
+      sha256 "82c6f23d3040db67872615ec98b9b9cc033600bd6c4dc0c83b6924f914230da0"
 
       def install
         bin.install "svix"
