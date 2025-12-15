@@ -1,25 +1,25 @@
 class SvixCli < Formula
   desc "A CLI to interact with the Svix API."
   homepage "https://www.svix.com"
-  version "1.82.0"
+  version "1.83.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/svix/svix-webhooks/releases/download/v1.82.0/svix-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "edd19bdc4deb2aec6ec0e25b17d11e3409309db7044edd15f9e07f6226490bbb"
+      url "https://github.com/svix/svix-webhooks/releases/download/v1.83.0/svix-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "cbeb8d2c94ebd006edd3edacfe513a7ab2abf54a96088da3a1b0576b085e88ef"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-webhooks/releases/download/v1.82.0/svix-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "76f7206df930881273b9afb02716044a9633a2511366a85ed22ba18259c2ab7d"
+      url "https://github.com/svix/svix-webhooks/releases/download/v1.83.0/svix-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "ab47b4c4a09d59b617c7205cb6e894068fac03d185b895dca288af5ebe93d5d9"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/svix/svix-webhooks/releases/download/v1.82.0/svix-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e93726a05a9c03544054c9311f39f45de886b10f5ca7e43e95ad1d74e4de5251"
+      url "https://github.com/svix/svix-webhooks/releases/download/v1.83.0/svix-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8dc5a6bac378011c9396f0d0d74f5a6d2089e928562e92904fe99d8b39fc3406"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/svix/svix-webhooks/releases/download/v1.82.0/svix-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "ec3e69af0b7b52b91ffd1831ea54a839fb178d7b340f2655c1b7cae19376598e"
+      url "https://github.com/svix/svix-webhooks/releases/download/v1.83.0/svix-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "bd3ae5b7fec84f09ee2a00399145f0ccfd14db8880867f3c56ccec3c056df65b"
     end
   end
   license "MIT"
