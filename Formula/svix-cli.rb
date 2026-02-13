@@ -65,4 +65,19 @@ class SvixCli < Formula
     # sample files.
     pkgshare.install(*leftover_contents) unless leftover_contents.empty?
   end
+
+  def caveats
+    <<~EOS
+      Thanks for installing the Svix CLI!
+
+      To get started, set your auth token:
+        export SVIX_AUTH_TOKEN=<YOUR-AUTH-TOKEN>
+
+      Or run:
+        svix login
+
+      For help:
+        svix --help
+    EOS
+  end
 end
