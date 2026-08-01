@@ -1,0 +1,8 @@
+--- Formula/svix-cli-orig.rb	2025-10-10 09:47:21
++++ Formula/svix-cli.rb	2025-10-10 09:47:42
+@@ -65,4 +65,5 @@
+
+     install_binary_aliases!
++    generate_completions_from_executable(bin/"svix", "completion", shells: %i[bash fish zsh])
+
+     # Homebrew will automatically install these, so we don't need to do that
